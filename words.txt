@@ -1,0 +1,6 @@
+Burgas|city on the sea near Sunny Beach|Town
+Sofia|capital of Bulgaria|Town
+Plovdiv|Capital of culture|Town
+Cat|animal love chasing rats|Animal
+Dog|animal love chasing dogs|Animal
+Horse|animal has long hair neck|Animal

@@ -1,0 +1,132 @@
+/* Pattern from subtlepatterns.com */
+body {
+	background-image: url(debut_light.png);
+}
+
+/* Set margins for divs */
+div {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/* Paragraph styling */
+p {
+	font-size: 17px;
+}
+
+/* Taken from bootstrap button, slightly modifed */
+input[type=submit] {
+	display: inline-block;
+	padding: 6px 15px;
+	margin-bottom: 0;
+	font-size: 25px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+/* On hover of submit button */
+input[type=submit]:hover {
+	color: #333;
+	background-color: #ebebeb;
+	border-color: #adadad;
+}
+
+.btn {
+  display: block;
+  background: red;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Error styles */
+.error {
+	color: red;
+}
+
+/* Content positioning */
+#content {
+	width: 800px;
+	height: 600px;
+	margin:0 auto;
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #ddd;
+	border-radius: 4px 4px 0 0;
+	box-shadow: none;
+	position: relative;
+	padding: 45px 15px 15px;
+	border-style: solid;
+}
+
+#word_display {
+	font-weight: bold;
+	color: red;
+}
+
+#login_signup {
+	float: right;
+}
+
+#logout {
+	float: right;
+}
+
+#scoreboard {
+	float: right;
+	margin-left: 20px;
+ 	margin-right: 20px;
+}
+
+#reset {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#word_upload {
+	margin-top: 275px;
+}
+
+#fillin {
+	font-size: 24px;
+}
+
+.alpha {
+	font-size: 24px;
+}
+
+.win {
+	color: green;
+	font-weight: bold;
+}
+
+.reset {
+	color: orange;
+	font-weight: bold;
+}
+
+.game_message, .loss{
+	color: red;
+	font-weight: bold;
+}
+#top{
+	text-align: center;
+}

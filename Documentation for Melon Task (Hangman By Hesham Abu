@@ -1,0 +1,37 @@
+Documentation for Melon Task (Hangman By Hesham AbuSaif)
+
+
+There are code comments for all the steps for the game.
+
+Index.php includes all game functions and redirect to (Login - Signup - logout) pages, also index.php require config.php which
+includes my database details.
+
+Starting session after loading the page to check what privileges for the user, i just made it normal player and admin.
+
+after starting the session, there is isset function to check if the session included a logged in username or no, if no the session goes to have value of "Anon" it's just a random word to know that the session doesn't have logged in user.
+
+if there is a logged in user, session will include the username in this variable $username, as i passed it in the login page by $_SESSION['username'] = $username;
+
+in the user's table there is "isAdmin" column which receives int, in index file isAdmin variable to 0 by default, but if the username isAdmin, it's set isAdmin variable to 1, which make the button of reset score and upload words activated.
+
+The second table we have is words which has fields (id,word, description, category), as i been asked to add from Melon, the data to the table can be uploaded from the text file, the example in the directory "words.txt". 
+
+Thy Syntax for the text in the file is adding the word,description,category and between each word "|", and between each line is /n.
+
+After uploading the file by _FILES['upload_file']['tmp_name'], all the old data dropping to can upload the new data, then pass the filename variable to fopen function to open the file and can read the lines.
+
+After we read the headerline and save to new variable, not it's time to explode, first we need to explode each line by /n, and because we have 3 values in each line we will explode it again by "|" to separate each line into 3 values, which will be equal to array and insert into the database.
+
+If play hangman is submitted, the gameinprogess variable value equal to 1, and gameover to 0, putting alpha variable "an empty variable" which receive the letter from $_GET['guess'], to compare to word variable at the first with strpos function which find the position of the first occurrence of "PHP" inside the string, if it receives false then the correct variable will be zero.
+
+if not it will have for loop to go through the wordlength and iterate into word array.
+
+if alpha it's not in the word, and the correct variable !=0, then it increase numFailedGuess by 1, and there is if condition to make gameover variable and loss variable into 1 when numfailedguess variable equal to 5.
+
+For the image, it's been cut into 6 images and follow numFailedGuess variable when the game in progress is equal to 1 "the game is on" by images/hang<?php echo $numFailedGuess; ?>.gif" as $numFailedGuess is the number of wrote tries as we said above and it's increase by 1 for each one which is iterating our images one by one.
+
+Reset game button, make numFailedGuess - inProgress - gameOver - gameMessage variables equal to zero, so the player is able to start from new.
+
+For the loss and win table, it's just a select queries from users table to retrieve the numbers from win and loss columns.
+
+I hope it was clear explanation for the logic of the game and what has been done, if you have any inquiries don't hesitate to contact me: hesham.abusaif@gmail.com
